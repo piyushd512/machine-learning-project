@@ -5,7 +5,7 @@ import seaborn as sns
 
 
 # Data loading
-df=pd.read_csv('WA_Fn-UseC_-HR-Employee-Attrition.csv')
+df=pd.read_csv('datasets/WA_Fn-UseC_-HR-Employee-Attrition.csv')
 
 # Converting Yes to 1 and No to 0
 df['Attrition'] = df['Attrition'].apply(lambda x: 1 if x == 'Yes' else 0)
@@ -118,7 +118,6 @@ plt.xlabel('Distance From Home')
 plt.legend()
 
 #Mann-Whitney's test to check if there is a significant difference between the two groups
-from scipy.stats import mannwhitneyu
 stats, p = mannwhitneyu(left_df["DistanceFromHome"], stayed_df["DistanceFromHome"])
 print(f'p-value: {p}')
 # p-value is 0.0023870470273627984 which is less than 0.05, so we reject the null hypothesis
@@ -131,7 +130,6 @@ plt.xlabel('Years With Current Manager')
 plt.legend()
 
 #Mann-Whitney's test to check if there is a significant difference between the two groups
-from scipy.stats import mannwhitneyu
 stats, p = mannwhitneyu(left_df["YearsWithCurrManager"], stayed_df["YearsWithCurrManager"])
 print(f'p-value: {p}')
 # p-value is 1.8067542583144407e-11 which is less than 0.05, so we reject the null hypothesis
@@ -144,7 +142,6 @@ plt.xlabel('Total Working Years')
 plt.legend()
 
 #Mann-Whitney's test to check if there is a significant difference between the two groups
-from scipy.stats import mannwhitneyu
 stats, p = mannwhitneyu(left_df["TotalWorkingYears"], stayed_df["TotalWorkingYears"])
 print(f'p-value: {p}')
 # p-value is 2.399569364798952e-14 which is less than 0.05, so we reject the null hypothesis
@@ -154,7 +151,6 @@ print(f'p-value: {p}')
 sns.boxplot(x='Gender', y='MonthlyIncome', data=df)
 
 #Mann-Whitney's test to check if there is a significant difference between Male and Female MonthlyIncome
-from scipy.stats import mannwhitneyu
 male_income = df[df['Gender'] == 'Male']['MonthlyIncome']
 female_income = df[df['Gender'] == 'Female']['MonthlyIncome']
 
@@ -167,3 +163,4 @@ print(f'p-value: {p}')
 # Let's see the Job Role vs. Monthly Income
 plt.figure(figsize=(15, 10))
 sns.boxplot(x='MonthlyIncome', y='JobRole', data=df)
+plt.show()

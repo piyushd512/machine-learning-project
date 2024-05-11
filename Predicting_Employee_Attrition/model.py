@@ -29,7 +29,7 @@ from sklearn.preprocessing import MinMaxScaler
 from imblearn.over_sampling import SMOTE
 
 # Data loading
-df=pd.read_csv('WA_Fn-UseC_-HR-Employee-Attrition.csv')
+df=pd.read_csv('datasets/WA_Fn-UseC_-HR-Employee-Attrition.csv')
 
 #Data Preprocessing
 
@@ -261,4 +261,4 @@ print("*"*76)
 
 
 # Saving Model
-pickle.dump(model, open("final_model.pkl", "wb"))
+pickle.dump(model, open("models/final_model.pkl", "wb"))

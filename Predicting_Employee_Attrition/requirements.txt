@@ -5,6 +5,5 @@ scikit-learn
 xgboost
 catboost
 seaborn
-sweetviz
 imblearn
 torch

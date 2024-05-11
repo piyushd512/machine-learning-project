@@ -1,4 +1,4 @@
-# machine-learning-project
+# Predicting Employee Attrition
 ## 1. Dataset:- IBM HR Analytics Employee Attrition & Performance
 link for Dataset:- https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset
 
@@ -33,12 +33,12 @@ There were no missing value present in Dataset
 There were no duplicate value were present
 #### 2.3. Checking Imbalance in Dataset
 There are less people who are leaving company compare who are staying.  People who are leaving company they were 16.1% and people who are no leaving they were 83.9%. This is a imbalance dataset.
-![alt text](image.png)
+![alt text](images/image.png)
 
 #### 2.4. Comparison between those who stayed and left
 Comparing the mean and standard deviation of the employees who stayed and left
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](images/image-1.png)
+![alt text](images/image-2.png)
  
 •	Age: Mean age of the employees who stayed is higher compared to who left
 •	Daily Rate: Rate of employees who stayed is higher
@@ -46,7 +46,7 @@ Comparing the mean and standard deviation of the employees who stayed and left
 •	Environment Satisfaction & Job Satisfaction: Employees who stayed are generally more satisfied with their jobs
 
 #### 2.5. Corelation
-![alt text](image-3.png)
+![alt text](images/image-3.png)
  
 •	Job level is strongly correlated with total working year
 •	Monthly income is strongly correlated with Job level
@@ -54,44 +54,44 @@ Comparing the mean and standard deviation of the employees who stayed and left
 •	Age is strongly correlated with monthly income
 #### 2.6. Who tend to leave
 •	Age:-> Younger people tend to leave more. Attrition rate is high from 18 to 26 age.
-![alt text](image-4.png) 
+![alt text](images/image-4.png) 
 •	Business Travel:-> Those who travel frequently they try to leave more.
-![alt text](image-5.png) 
+![alt text](images/image-5.png) 
 •	Department:-> From Salse Department people try to leave more. 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 •	Education Field:-> Those who are in Marketing and Technical Degree they tend to leave more.
-![alt text](image-7.png) 
+![alt text](images/image-7.png) 
 •	Job Role:-> Sales Representative trying to leave more.
-![alt text](image-8.png)  
+![alt text](images/image-8.png)  
 •	Marital Status:-> Single employees tend to leave compared to married and divorced. 
-![alt text](image-9.png) 
+![alt text](images/image-9.png) 
 •	Over Time:-> Those who doing Over Time(Yes) they tend to leave more.
-![alt text](image-10.png)  
+![alt text](images/image-10.png)  
 •	Job Involvement:-> Less involved employees tend to leave the company.
-![alt text](image-11.png)  
+![alt text](images/image-11.png)  
 •	Job Level:->Less experienced (low job level) tend to leave the company.
-![alt text](image-12.png)  
+![alt text](images/image-12.png)  
 
 #### 2.7. Other Significant things
 •	There is significant difference in the distance from home between employees who left and stayed (p<.05)
 •	Mann-Whitney's test to check if there is a significant difference between the two groups
 •	p-value is 0.0023870470273627984 which is less than 0.05, so we reject the null hypothesis
 •	There is significant difference in the distance from home between employees who left and stayed
-![alt text](image-13.png)  
+![alt text](images/image-13.png)  
 •	There is significant difference in the Years With Current Manager between employees who left and stayed (p<.05)
 •	p-value is 1.8067542583144407e-11 which is less than 0.05, so we reject the null hypothesis
 •	There is significant difference in the years with current manager between employees who left and stayed
-![alt text](image-14.png)  
+![alt text](images/image-14.png)  
 •	There is significant difference in the Total Working Years between employees who left and stayed (p<.05)
 •	p-value is 2.399569364798952e-14 which is less than 0.05, so we reject the null hypothesis
 •	There is significant difference in the total working years between employees who left and stayed 
-![alt text](image-15.png) 
+![alt text](images/image-15.png) 
 •	There are no significant differences in Monthly Income between Female and Male employees (p=0.09)
 •	p-value is 0.08841668326602112 which is greater than 0.05, so we fail to reject the null hypothesis and assume no differences in Monthly Income between Male and Female employees 
-![alt text](image-16.png) 
+![alt text](images/image-16.png) 
 •	Research Directors and Managers have the highest Monthly Income
 •	Sales Representatives have the lowest Monthly Income, followed by Research Scientists and Lab Technicians  
-![alt text](image-17.png)
+![alt text](images/image-17.png)
 
 ## 3.	Data Preparation
 #### 3.1.	Dropping Columns
@@ -114,7 +114,7 @@ Comparing the mean and standard deviation of the employees who stayed and left
 ## 4.	Model Selection and Training
 •	'Logistic Regression', 'SVC', 'Random Forest Classifier', 'Decision Tree Classifier', 'XGB Classifier', 'CatBoost Classifier', 'K Neighbors Classifier' ,'Gaussian NB' ,'Gradient Boosting Classifier' ,'AdaBoost Classifier' ,and 'Simple Nural Network Binary Classification model' models are taken in selecting process for selecting the best model for this dataset.
 •	'Simple Nural Network Binary Classification model' is made with the help of PyTorch library.
-![alt text](image-18.png)
+![alt text](images/image-18.png)
 
 ## 5.	Hyperparameter Tuning
 •	With the help of Grid Search these parameters are finded for Logistic Regression
@@ -147,8 +147,10 @@ it will create vertual enviorment.
 `pip install -r requirements.txt`
 Wait for 2 or 3 minuts until all dependences downloded.
 4. Then after if you want see data and it's insite use 
-`python data_visualiation.py`
+`python data_visualisation.py`
 5. If you want see how model work use:
 `python model.py`
 6. If you want to see final model use
 `python fila.model`
+7. If you want to Deactivat vertual enviorment
+`deactivate`
