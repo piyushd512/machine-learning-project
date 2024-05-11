@@ -2,6 +2,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+from scipy.stats import mannwhitneyu
 
 
 # Data loading
@@ -116,6 +117,7 @@ sns.kdeplot(left_df['DistanceFromHome'], label='Employees who left', fill=True, 
 sns.kdeplot(stayed_df['DistanceFromHome'], label='Employees who Stayed', fill=True, color='b')
 plt.xlabel('Distance From Home')
 plt.legend()
+plt.show()
 
 #Mann-Whitney's test to check if there is a significant difference between the two groups
 stats, p = mannwhitneyu(left_df["DistanceFromHome"], stayed_df["DistanceFromHome"])
@@ -128,6 +130,7 @@ sns.kdeplot(left_df['YearsWithCurrManager'], label='Employees who left', fill=Tr
 sns.kdeplot(stayed_df['YearsWithCurrManager'], label='Employees who Stayed', fill=True, color='b')
 plt.xlabel('Years With Current Manager')
 plt.legend()
+plt.show()
 
 #Mann-Whitney's test to check if there is a significant difference between the two groups
 stats, p = mannwhitneyu(left_df["YearsWithCurrManager"], stayed_df["YearsWithCurrManager"])
@@ -140,6 +143,7 @@ sns.kdeplot(left_df['TotalWorkingYears'], label='Employees who left', fill=True,
 sns.kdeplot(stayed_df['TotalWorkingYears'], label='Employees who Stayed', fill=True, color='b')
 plt.xlabel('Total Working Years')
 plt.legend()
+plt.show()
 
 #Mann-Whitney's test to check if there is a significant difference between the two groups
 stats, p = mannwhitneyu(left_df["TotalWorkingYears"], stayed_df["TotalWorkingYears"])
