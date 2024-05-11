@@ -171,18 +171,17 @@ Comparing the mean and standard deviation of the employees who stayed and left:
 ## 6. Steps to Run File
 
 1. Set up the environment using:
-`python -m venv file_path/env`
+ -`python -m venv file_path/env`
 This will create a virtual environment.
 2. Activate the environment with:
-`file_path/env/Scripts/activate`
+ -`file_path/env/Scripts/activate`
 3. Install dependencies using:
-`pip install -r requirements.txt`
+ -`pip install -r requirements.txt`
 Wait for 2 to 3 minutes until all dependencies are downloaded.
 4. To visualize the data and insights, use:
-`python data_visualisation.py`
+ -`python data_visualisation.py`
 5. To see how the model works, use:
-`python model.py`
-6. To see the final model, use:
-`python final.py`
-7. To deactivate the virtual environment, use:
-`deactivate`
+ -`python model.py`
+It will train to reload a new model with the name 'final_model.pkl' for future use in the models directory. 
+6. To deactivate the virtual environment, use:
+ -`deactivate`
